@@ -9,23 +9,22 @@ function displayConversion(amount){
   $('#output-area').show();
   $("#output").html(amount);
 }
-function populateDropdown(id, reference){
+function populateSelects(reference){
   let currencies = Object.keys(reference.conversion_rates);
   for(let i = 0; i < currencies.length; i++){
-    $("#" + id).append("<option>" + currencies[i] + "</option>");
+    $("#exchange-from").append("<option>" + currencies[i] + "</option>");
+    $("#exchange-to").append("<option>" + currencies[i] + "</option>");
   }
 }
-async function callForCurrencies(id){
+async function callForCurrencies(){
   const response = await CurrencyExchange.getUSDExchangeRates();
-  populateDropdown(id, response);
+  populateSelects(response);
 }
 async function callForAnyRate(convertFrom, convertTo, amount){
   const response = await CurrencyExchange.getAnyExchangeRate(convertFrom);
   displayConversion(Utility.convertAmount(response, convertTo, amount));
 }
 callForCurrencies("exchange-from");
-callForCurrencies("exchange-to");
-
 $('#form-conversion').submit((event)=>{
   event.preventDefault();
   let convertFrom = $('#exchange-from').val();
