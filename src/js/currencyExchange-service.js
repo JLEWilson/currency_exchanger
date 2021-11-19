@@ -15,8 +15,11 @@ export default class CurrencyExchange{
   static async getAnyExchangeRate(convertFrom){
     try{
       const response = await fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/${convertFrom}`);
-      if(!response.ok){
+      if(response.status === 404){
         throw Error("Please enter an existing currency!");
+      }
+      if(!response.ok){
+        throw Error(response.status)
       }
       return await response.json();
     } catch(error) {
