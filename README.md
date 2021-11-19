@@ -30,10 +30,10 @@ _This application populates 2 dropdown selections for currencies based on the cu
 * _Now that the repository is cloned to your computer, right click on the folder and click open with vs code_
 * _Now type npm install in your terminal to install the packages used in the project, you may have to run install twice due to the size of the packages_
 * _**To make sure the application works for you, you will need to get your own api key using the following steps:**_
-_1. Create an account on the [ExchangeRate-API](https://www.exchangerate-api.com/) website._
-_2. If you created an account using the **Get Free Key** button it will have already generated one for you, If you did not you will be able to generate one by navigating to the **Api Keys** tab and selecting **Add New Api Key**_
-_3. Once you have an API key you will need to create a .env file at the top level of the project directory_ 
-_4. type: API_KEY=Your-Api-Key-Here  with your API Key instead of the text after the equals sign._
+1. _Create an account on the [ExchangeRate-API](https://www.exchangerate-api.com/) website._
+2. _If you created an account using the **Get Free Key** button it will have already generated one for you, If you did not you will be able to generate one by navigating to the **Api Keys** tab and selecting **Add New Api Key**_
+3. _Once you have an API key you will need to create a .env file at the top level of the project directory_ 
+4. _type: API_KEY=Your-Api-Key-Here  with your API Key instead of the text after the equals sign._
 * _You can now view the project by typing npm run start in your terminal_
 * _OR_
 * _You can find the deployed project on gh-pages (here)[]
