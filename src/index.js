@@ -10,14 +10,24 @@ function populateDropdown(id, reference){
     $("#" + id).append("<option>" + currencies[i] + "</option>");
   }
 }
+function convertAmount(response, convertTo, amount){
+  return response.conversion_rates[convertTo] * amount;
+}
 async function callForCurrencies(id){
   const response = await CurrencyExchange.getUSDExchangeRates();
   populateDropdown(id, response);
 }
-async function callForAnyRate(convertFrom){
+async function callForAnyRate(convertFrom, convertTo, amount){
   const response = await CurrencyExchange.getAnyExchangeRate(convertFrom);
-  console.log(response);
-  return response;
+  convertAmount(response, convertTo, amount);
 }
 callForCurrencies("exchange-from");
 callForCurrencies("exchange-to");
+
+$('#form-conversion').submit((event)=>{
+  event.preventDefault();
+  let convertFrom = $('#exchange-from').val();
+  let convertTo = $('#exchange-to').val();
+  let exchangeAmount = $('#amount').val();
+  callForAnyRate(convertFrom, convertTo, exchangeAmount);
+});
