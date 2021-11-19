@@ -23,8 +23,6 @@ _This application populates 2 dropdown selections for currencies based on the cu
 
 ## Setup/Installation Requirements
 
-Make sure to include information for API
-
 * _You can find the github repository [here](https://github.com/JLEWilson/currency_exchanger)_
 * _Click the code button, and copy the https link_
 * _In your in git bash or your preferred git terminal navigate to the directory you would like to store the project_
