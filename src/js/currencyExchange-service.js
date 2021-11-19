@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 export default class CurrencyExchange{
   static async getUSDExchangeRates(){
     try{
@@ -14,11 +16,12 @@ export default class CurrencyExchange{
     try{
       const response = await fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/${convertFrom}`);
       if(!response.ok){
-        throw Error(response.statusText);
+        throw Error("Please enter an existing currency!");
       }
       return await response.json();
     } catch(error) {
-      return error.message;
+      $('#error').innerHTML = error;
+      $('#error').show();
     }
   }
 }
