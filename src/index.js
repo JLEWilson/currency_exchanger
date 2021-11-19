@@ -7,7 +7,7 @@ import CurrencyExchange from './js/currencyExchange-service';
 function populateDropdown(id, reference){
   let currencies = Object.keys(reference.conversion_rates);
   for(let i = 0; i < currencies.length; i++){
-    $(`#${id}`).append("<option'>" + currencies[i] + "</option>")
+    $("#" + id).append("<option>" + currencies[i] + "</option>");
   }
 }
 async function callForCurrencies(id){
@@ -19,4 +19,5 @@ async function callForAnyRate(convertFrom){
   console.log(response);
   return response;
 }
-callForAnyRate("USD");
+callForCurrencies("exchange-from");
+callForCurrencies("exchange-to");
