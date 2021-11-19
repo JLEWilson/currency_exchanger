@@ -1,4 +1,4 @@
-# _Project Title_
+# _Currency Exchanger_
 
 #### By _**Jacob Wilson**_
 
@@ -22,7 +22,7 @@ _a detailed description_
 
 ## Setup/Installation Requirements
 
-Make sure to include information for package.jason and install
+Make sure to include information for API
 
 * _You can find the github repository [here]()_
 * _Click the code button, and copy the https link_
