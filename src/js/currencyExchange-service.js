@@ -9,7 +9,7 @@ export default class CurrencyExchange{
       }
       return await response.json();
     } catch(error) {
-      return error.message;
+      return error.message; //not showing in the dom because user has no interaction with this call
     }
   }
   static async getAnyExchangeRate(convertFrom){
@@ -24,6 +24,7 @@ export default class CurrencyExchange{
       return await response.json();
     } catch(error) {
       $('#error').innerHTML = error;
+      $('#output-area').show();
       $('#error').show();
     }
   }

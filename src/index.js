@@ -6,6 +6,7 @@ import CurrencyExchange from './js/currencyExchange-service';
 import Utility from './js/utility';
 
 function displayConversion(amount){
+  $('#output-area').show();
   $("#output").html(amount);
 }
 function populateDropdown(id, reference){
