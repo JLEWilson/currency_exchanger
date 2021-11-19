@@ -3,8 +3,30 @@
   <title>Currency Exchanger</title>
 </head>
 <body>
-  <div class="card">
-    <h1 class="card-title">Currency Exchanger</h1>
+  <div class="container">
+    <div class="row">
+      <div class="card">
+        <h1 id="title">Currency Exchanger</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card" id="exchange-area">
+        <form id="form-conversion">
+          <label>Convert from:
+            <select id="exchange-from"></select>
+          </label>
+          <label>To:
+            <select id="exchange-to"></select>
+          </label>
+          <br>
+          <label>Amount:
+            <input id="amount"  type="number" min="0">
+          </label>
+          <br>
+          <button type="submit" class="btn btn-warning btn-lg" id="convert">Convert</button>
+        </form>
+      </div>
+    </div>
   </div>
 </body>
 </html>
