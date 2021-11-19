@@ -32,11 +32,11 @@ _This application populates 2 dropdown selections for currencies based on the cu
 * _**To make sure the application works for you, you will need to get your own api key using the following steps:**_
 1. _Create an account on the [ExchangeRate-API](https://www.exchangerate-api.com/) website._
 2. _If you created an account using the **Get Free Key** button it will have already generated one for you, If you did not you will be able to generate one by navigating to the **Api Keys** tab and selecting **Add New Api Key**_
-3. _Once you have an API key you will need to create a .env file at the top level of the project directory_ 
-4. _Type: API_KEY=Your-Api-Key-Here  with your API Key instead of the text after the equals sign and save the file._
+3. _Once you have an API key you will need to create a .env file at the top level of the project directory._ 
+4. _Type: API\_KEY=Your-Api-Key-Here  with your API Key instead of the text after the equals sign and save the file._
 * _You can now view the project by typing npm run start in your terminal_
 * _OR_
-* _You can find the deployed project on gh-pages (here)[]
+* _You can find the deployed project on gh-pages (here)[https://jlewilson.github.io/currency_exchanger/]_
 
 ## Known Bugs
 
