@@ -19,7 +19,7 @@ export default class CurrencyExchange{
         throw Error("Please enter an existing currency!");
       }
       if(!response.ok){
-        throw Error(response.status)
+        throw Error(response.status);
       }
       return await response.json();
     } catch(error) {
