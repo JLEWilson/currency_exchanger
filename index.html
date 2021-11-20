@@ -1,0 +1,39 @@
+<html lang="en-US">
+<head>
+  <title>Currency Exchanger</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="card title-area">
+        <h1>Currency Exchanger</h1>
+        <p>This application allows you to convert any amount of money between different currencies! Select the currency you would like to convert from and the currency you would like to convert to, then enter the amount of currency you would like to convert.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card" id="exchange-area">
+        <form id="form-conversion">
+          <label>Convert from:
+            <select id="exchange-from"></select>
+          </label>
+          <label>To:
+            <select id="exchange-to"></select>
+          </label>
+          <br>
+          <label>Amount:
+            <input id="amount" type="number" min="0" step=".01">
+          </label>
+          <br>
+          <button type="submit" class="btn btn-warning btn-lg" id="convert">Convert</button>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card" id="output-area">
+        <h2 id='output'></h1>
+          <h3 id='error'></h3>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>
